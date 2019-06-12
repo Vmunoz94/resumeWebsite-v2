@@ -65,7 +65,7 @@
     </div>
 
     <div class="text-right mx-2 pb-2">
-      <a href="">
+      <a href="https://github.com/Vmunoz94/resumeWebsite-v2">
         <i class="fas fa-code icons"></i>
       </a>
     </div>
