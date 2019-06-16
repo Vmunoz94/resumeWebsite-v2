@@ -46,6 +46,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    max-width: 100%;
   }
 
   .left{

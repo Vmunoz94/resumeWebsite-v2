@@ -79,6 +79,15 @@ img:hover{
   animation-iteration-count: infinite;
 }
 .middle{
-  width: 52.3%;
+  width: 53%;
+}
+@media (max-width: 768px) {
+  .btn {
+    font-size:14px;
+    padding:8px 12px;
+  }
+  .middle{
+    width: 57%;
+  }
 }
 </style>
