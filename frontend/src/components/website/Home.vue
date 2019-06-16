@@ -37,7 +37,7 @@
   #backgroundImage { 
     z-index: -1;
     width: 100vw;
-    height: 743px;
+    height: 1000px;
     background: url(../../assets/forrest.png) no-repeat center center fixed; 
     position: absolute;
     top: 0;

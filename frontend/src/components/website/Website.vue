@@ -2,10 +2,10 @@
   <div>
     <Navbar/>
     <Home/>
-    <About class="padding-top"/>
+    <About class="padding-top overflow"/>
     <Projects class="padding-top"/>
     <Resume class="padding-top"/>
-    <Contact class="padding-top"/>
+    <Contact class="padding-top overflow"/>
   </div>
 </template>
 
@@ -34,6 +34,9 @@
     margin: 0;
     padding: 0;
     /* font-family: 'Abhaya Libre', serif !important; */
+  }
+  .overflow{
+    overflow-x: hidden;
   }
   .padding-top{
     padding-top: 75px;
