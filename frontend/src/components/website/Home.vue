@@ -36,17 +36,23 @@
 
   #backgroundImage { 
     z-index: -1;
-    width: 100vw;
-    height: 1000px;
+    width: 100%;
+    /* height: 1000px; */
+    min-height: 100%;
+    height: 150%;
     background: url(../../assets/forrest.png) no-repeat center center fixed; 
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
+    /* for browser */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    max-width: 100%;
+    background-repeat: no-repeat;
   }
 
   .left{
@@ -81,6 +87,34 @@
     font-size: 75px;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+  }
+
+  @media (max-width: 768px) and (orientation:portrait) {
+    #backgroundImage{
+      /* for mobile */
+      -webkit-background-size: auto 100%; 
+      -moz-background-size: auto 100%; 
+      -o-background-size: auto 100%; 
+      background-size: auto 100%;
+      background-attachment: scroll;
+    }
+    .display-4{
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 768px) and (orientation:landscape) {
+    #backgroundImage{
+      /* for mobile */
+      -webkit-background-size: 100% auto; 
+      -moz-background-size: 100% auto; 
+      -o-background-size: 100% auto; 
+      background-size: 100% auto;
+      background-attachment: scroll;
+    }
+    .display-4{
+      font-size: 40px;
+    }
   }
 </style>
 

@@ -19,8 +19,7 @@
           </p>
           <p>
             At the end of my second year in college at <span class="college">San Francisco State University</span>, I took a mandatory course called "Introduction to Computers". 
-            That class was the very first time I worked with a programming language. That class was the most enjoyable class I have taken so far, 
-            soon after that semester ended I began looking into that major.
+            That class was the very first time I worked with a programming language and was the most enjoyable class I have taken so far.
           </p>
           <p>
             I spent the following year debating whether I should finish my Mechanical Engineering degree or start over and pursue Computer Science.

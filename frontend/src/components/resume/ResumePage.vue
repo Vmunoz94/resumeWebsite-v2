@@ -2,7 +2,7 @@
   <div class="container-fluid shrink">
     <div class="row">
             <!-- Left Half -->
-            <div class="col-4 bg-dark p-0 text-white">
+            <div class="col-sm-4 bg-dark p-0 text-white">
                 <div class="pl-5 pt-3">
                     <h1 id="name" class="display-4 mb-0">Victor</h1>
                     <h1 id="name" class="display-4">Muñoz</h1>
@@ -31,7 +31,7 @@
                     <h6 class="mb-0">
                         <i class="far fa-window-maximize"></i> Website:
                     </h6>
-                    <p>https://www.VictorMunoz.io</p>
+                    <p>www.VictorMunoz.io</p>
                 </div>
 
                 <section id="proficient" class="bg-white text-dark pl-5 py-2 rounded-right">
@@ -78,7 +78,7 @@
             </div>
 
             <!-- Right Half -->
-            <div id="right-half" class="col-8 bg-white">
+            <div id="right-half" class="col-sm-8 bg-white">
                 <div class="right-half-padding"></div>
                 <hr class="style-two m-0">
                 <section>
