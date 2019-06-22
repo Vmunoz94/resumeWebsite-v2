@@ -1,58 +1,34 @@
 <template>
   <div id="project">
     <header class="mb-5">
-      <h2 class="display-4 text-center">Projects - THIS SECTION IS WORK IN PROGRESS</h2>
+      <h2 class="display-4 text-center">Projects</h2>
       <hr class="w-75 my-0"/> 
     </header>
 
     <div class="mx-4 pb-4 white-background">
       <div class="card-deck mx-2 py-4">
-        <div class="card">
-          <img class="card-img-top" src="#" alt="Card image cap">
+        <!-- eslint-disable -->
+        <div class="card mb-4" v-for="project in projects"
+          :key="project.name"
+          data-aos= "flip-left"
+          :data-aos-delay= project.offset
+        >
+          <img class="card-img-top" :src="project.image" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.description }}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">{{ project.frameworks | joinArray }}</small>
           </div>
         </div>
-        <div class="card">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
+
       </div>
 
-      <div class="text-center">
+      <!-- <div class="text-center">
         <i class="fas fa-arrow-left left-right-arrows mx-5"></i>
         <i class="fas fa-arrow-right left-right-arrows mx-5"></i>
-      </div>
+      </div> -->
     </div>
 
     <div class="d-flex justify-content-center mt-5">
@@ -61,7 +37,47 @@
   </div>
 </template>
 
-<style scoped>
+<script>
+  export default {
+    data(){
+      return {
+        projects: [{
+          offset: "0",
+          image: require("../../assets/gatorlist/gatorlist1.png"),
+          name: 'Gatorlist',
+          description: 'Website for SFSU students to look for and find housing.',
+          frameworks: ['Laravel', 'Vue.js', 'MySQL']
+        },{
+          offset: "100",
+          image: require("../../assets/agario/agario1.png"),
+          name: 'Agar.io Clone',
+          description: 'Re-create the popular and addicting game "Agar.io".',
+          frameworks: ['Node.js/Express', 'React', 'Redis/MongoDB']
+        },{
+          offset: "200",
+          image: require("../../assets/api/api1.png"),
+          name: 'API Endpoints',
+          description: 'Practice microservice architecture by making each API endpoint its own stand-alone app.',
+          frameworks: ['Node.js/Express', 'React', 'MongoDB']
+        },{
+          offset: "300",
+          image: require("../../assets/rps/rps1.png"),
+          name: 'Rock, Paper, Scissors',
+          description: '3 hour final exam. Create a rock, paper, scissors web application using websockets.',
+          frameworks: ['Node.js/Express', 'React', 'MongoDB']
+        }]
+      }
+    },
+    filters: {
+      joinArray(value) {
+        if (!value) return
+        return value.join(' - ');
+      }
+    }
+  }
+</script>
+
+<style scoped lang="scss">
   #project{
     background-color: rgb(182, 171, 75);
     color: black;
@@ -95,5 +111,33 @@
     font-size: 75px;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+  }
+  
+  // Bootstrap 4 breakpoints & gutter
+  $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  ) !default;
+
+  $grid-gutter-width: 30px !default;
+
+  // number of cards per line for each breakpoint
+  $cards-per-line: (
+    xs: 2,
+    sm: 2,
+    md: 3,
+    lg: 4,
+    xl: 4,
+  );
+
+  @each $name, $breakpoint in $grid-breakpoints {
+    @media (min-width: $breakpoint) {
+      .card-deck .card {
+        flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+      }
+    }
   }
 </style>

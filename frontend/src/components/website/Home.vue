@@ -31,7 +31,8 @@
 <style scoped>
   #home{
     width: 100%;
-    min-height: 660px;
+    /* min-height: 660px; */
+    height: 90vh;
   }
 
   #backgroundImage { 
@@ -106,10 +107,10 @@
   @media (max-width: 768px) and (orientation:landscape) {
     #backgroundImage{
       /* for mobile */
-      -webkit-background-size: 100% auto; 
+      /* -webkit-background-size: 100% auto; 
       -moz-background-size: 100% auto; 
       -o-background-size: 100% auto; 
-      background-size: 100% auto;
+      background-size: 100% auto; */
       background-attachment: scroll;
     }
     .display-4{

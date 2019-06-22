@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-    <header>
+    <div>
       <h2 class="display-4 text-center mb-0">Contact</h2>
       <hr class="bg-white w-50"/>
       <p class="w-50 mx-auto text-center lead">
@@ -14,7 +14,7 @@
           color="#007bff"
         />
       </div>
-    </header>
+    </div>
 
     <form class="container pb-5" @submit.prevent="onSend" 
       data-aos="zoom-out-up" 

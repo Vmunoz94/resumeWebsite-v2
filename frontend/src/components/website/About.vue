@@ -4,7 +4,7 @@
       <div class="row">
         <!-- text -->
         <div class="col-xs-12 col-md-6" 
-          data-aos="fade-up-right" 
+          data-aos="fade-right" 
           data-aos-easing="ease" 
           data-aos-duration="600"
           data-aos-offset="0">
@@ -29,7 +29,7 @@
 
         <!-- image -->
         <div class="col-12 col-md-6 order-first order-md-last" 
-          data-aos="fade-up-left" 
+          data-aos="fade-left" 
           data-aos-easing="ease" 
           data-aos-duration="600"
           data-aos-offset="0">
