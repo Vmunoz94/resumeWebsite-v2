@@ -1,0 +1,50 @@
+version: '3.7'
+services:
+  gateway:
+    image: vmunoz94/resumewebsite-gateway:latest
+    ports:
+      - "80:4000"
+    deploy:
+      replicas: 1
+    networks:
+      - webnet
+    environment:
+      - FRONT_END_HOST=http://frontend:8080
+      - DOWNLOAD_HOST=http://download:5000
+      - SEND_HOST=http://send:6000
+  frontend:
+    image : vmunoz94/resumewebsite-frontend:latest
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - webnet
+  download:
+    image : vmunoz94/resumewebsite-downloadresume:latest
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - webnet
+  send:
+    image : vmunoz94/resumewebsite-sendemail:latest
+    ports:
+      - "6000:6000"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - webnet
+    environment:
+      - USER_HOST= <not so private>
+      - PASS_HOST= <private>
+      - EMAIL_HOST= <not so private>
+networks:
+  webnet:
