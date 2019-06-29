@@ -16,6 +16,7 @@
   import Projects from './Projects';
   import Resume from './Resume';
   import Contact from './Contact';
+  import AOS from 'aos';
 
   export default {
     components: {
@@ -26,6 +27,9 @@
       Resume,
       Contact,
     },
+    mounted(){
+      AOS.refresh();
+    }
   }
 </script>
 

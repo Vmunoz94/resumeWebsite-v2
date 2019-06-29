@@ -1,0 +1,23 @@
+[
+  {
+    "offset": "0",
+    "name": "Gatorlist",
+    "description": "Website for SFSU students to look for and find housing.",
+    "frameworks": ["Laravel", "Vue.js", "MySQL"]
+  },{
+    "offset": "100",
+    "name": "Agar.io Clone",
+    "description": "Re-create the popular and addicting game \"Agar.io\".",
+    "frameworks": ["Node.js/Express", "React", "Redis/MongoDB"]
+  },{
+    "offset": "200",
+    "name": "API Endpoints",
+    "description": "Practice microservice architecture by making each API endpoint its own stand-alone app.",
+    "frameworks": ["Node.js/Express", "React", "MongoDB"]
+  },{
+    "offset": "300",
+    "name": "Rock, Paper, Scissors",
+    "description": "3 hour final exam. Create a rock, paper, scissors web application using websockets.",
+    "frameworks": ["Node.js/Express", "React"]
+  }
+]

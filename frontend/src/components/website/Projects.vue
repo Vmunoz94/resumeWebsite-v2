@@ -5,15 +5,19 @@
       <hr class="w-75 my-0"/> 
     </header>
 
+    <!-- Cards -->
     <div class="mx-4 pb-4 white-background">
       <div class="card-deck mx-2 py-4">
         <!-- eslint-disable -->
-        <div class="card mb-4" v-for="project in projects"
+        <div class="card mb-4" v-for="(project, index) in projects"
           :key="project.name"
           data-aos= "flip-left"
           :data-aos-delay= project.offset
+          data-toggle="modal" 
+          data-target="#Modal"
+          @click="resetCarousel(index)"
         >
-          <img class="card-img-top" :src="project.image" alt="Card image cap">
+          <img class="card-img-top" :src="images[index][0]" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{ project.name }}</h5>
             <p class="card-text">{{ project.description }}</p>
@@ -22,9 +26,56 @@
             <small class="text-muted">{{ project.frameworks | joinArray }}</small>
           </div>
         </div>
-
       </div>
 
+      <!-- Modal -->
+      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h3 class="modal-title mx-auto" id="ModalLabel">{{ projects[i].name }}</h3>
+              <!-- <button type="button" class="close mx-0 px-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+            </div>
+
+            <div class="modal-body">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators w-25 mx-auto bg-dark rounded">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"/>
+                  <li 
+                    v-for="(image, index) in images[i]" 
+                    v-if="index != 0"
+                    data-target="#carouselExampleIndicators" 
+                    :data-slide-to="index"
+                  />
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" :src="images[i][0]" alt="First slide">
+                  </div>
+                  <div 
+                    v-for="(image, index) in images[i]" 
+                    v-if="index != 0"
+                    class="carousel-item"
+                  >
+                    <img class="d-block w-100" :src="image" alt="First slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- <div class="text-center">
         <i class="fas fa-arrow-left left-right-arrows mx-5"></i>
         <i class="fas fa-arrow-right left-right-arrows mx-5"></i>
@@ -38,34 +89,46 @@
 </template>
 
 <script>
+  import projects from './projects.json'
+  /* eslint-disable */
   export default {
     data(){
       return {
-        projects: [{
-          offset: "0",
-          image: require("../../assets/gatorlist/gatorlist1.png"),
-          name: 'Gatorlist',
-          description: 'Website for SFSU students to look for and find housing.',
-          frameworks: ['Laravel', 'Vue.js', 'MySQL']
-        },{
-          offset: "100",
-          image: require("../../assets/agario/agario1.png"),
-          name: 'Agar.io Clone',
-          description: 'Re-create the popular and addicting game "Agar.io".',
-          frameworks: ['Node.js/Express', 'React', 'Redis/MongoDB']
-        },{
-          offset: "200",
-          image: require("../../assets/api/api1.png"),
-          name: 'API Endpoints',
-          description: 'Practice microservice architecture by making each API endpoint its own stand-alone app.',
-          frameworks: ['Node.js/Express', 'React', 'MongoDB']
-        },{
-          offset: "300",
-          image: require("../../assets/rps/rps1.png"),
-          name: 'Rock, Paper, Scissors',
-          description: '3 hour final exam. Create a rock, paper, scissors web application using websockets.',
-          frameworks: ['Node.js/Express', 'React', 'MongoDB']
-        }]
+        i: 0,
+        projects,
+        images: [[
+            require("../../assets/gatorlist/gatorlist1.png"),
+            require("../../assets/gatorlist/gatorlist2.png"),
+            require("../../assets/gatorlist/gatorlist3.png"),
+            require("../../assets/gatorlist/gatorlist4.png"),
+            require("../../assets/gatorlist/gatorlist5.png"),
+            require("../../assets/gatorlist/gatorlist6.png"),
+          ],[
+            require("../../assets/agario/agario1.png"),
+            require("../../assets/agario/agario2.png"),
+            require("../../assets/agario/agario3.png"),
+            require("../../assets/agario/agario4.png"),
+            require("../../assets/agario/agario5.png"),
+          ],[
+            require("../../assets/api/api1.png"),
+            require("../../assets/api/api2.png"),
+            require("../../assets/api/api3.png"),
+            require("../../assets/api/api4.png"),
+            require("../../assets/api/api5.png"),
+          ],[
+            require("../../assets/rps/rps1.png"),
+            require("../../assets/rps/rps2.png"),
+            require("../../assets/rps/rps3.png"),
+            require("../../assets/rps/rps4.png"),
+          ]]
+      }
+    },
+    methods: {
+      resetCarousel(index){
+        // i correlates to index of images
+        this.i = index;
+        // reset carousel -> not all projects have same # of images
+        $('.carousel').carousel(0); 
       }
     },
     filters: {
@@ -95,6 +158,18 @@
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  }
+  .card:hover{
+    cursor: pointer;
+    transform: scale(1.025);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  }
+
+  .carousel-icon{
+    background-color: black;
+    border-radius: 25%;
   }
 
   .left-right-arrows{
@@ -128,7 +203,7 @@
   $cards-per-line: (
     xs: 2,
     sm: 2,
-    md: 3,
+    md: 2,
     lg: 4,
     xl: 4,
   );
