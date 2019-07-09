@@ -23,7 +23,7 @@ services:
     networks:
       - webnet
   download:
-    image : vmunoz94/resumewebsite-downloadresume:latest
+    image : vmunoz94/resumewebsite-download:latest
     ports:
       - "5000:5000"
     deploy:

@@ -13,15 +13,45 @@
           :key="project.name"
           data-aos= "flip-left"
           :data-aos-delay= project.offset
-          data-toggle="modal" 
-          data-target="#Modal"
-          @click="resetCarousel(index)"
         >
+          <!-- card header -->
           <img class="card-img-top" :src="images[index][0]" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{ project.name }}</h5>
+            <h5 class="card-title text-center">{{ project.name }}</h5>
+            <hr class="py-0 mt-0"/>
             <p class="card-text">{{ project.description }}</p>
           </div>
+
+          <!-- card buttons -->
+          <div v-for="button in project.buttons">
+            <!-- view images -->
+            <button class="btn btn-dark btn-block mt-0 mb-2"
+              v-if="button === 'View Images'"
+              data-toggle="modal" 
+              data-target="#Modal"
+              @click="resetCarousel(index)">
+              <i class="fas fa-images"></i> {{ button }}
+            </button>
+            <!-- info -->
+            <button class="btn btn-light btn-block mt-0 mb-2"
+              v-if="button === 'Info'"
+              data-container="body" 
+              data-toggle="popover" 
+              data-placement="bottom"
+              data-trigger="focus"
+              :title="project.popoverTitle" 
+              :data-content="project.popoverInfo">
+              <i class="fas fa-info-circle"></i> {{ button }}
+            </button>
+            <!-- download -->
+            <button class="btn btn-info btn-block mt-0 mb-2"
+              v-if="button === 'Download'"
+              @click="downloadAgario">
+              <i class="fas fa-file-download"></i> Download Files
+            </button>
+          </div>
+
+          <!-- card footer -->
           <div class="card-footer">
             <small class="text-muted">{{ project.frameworks | joinArray }}</small>
           </div>
@@ -35,9 +65,6 @@
 
             <div class="modal-header">
               <h3 class="modal-title mx-auto" id="ModalLabel">{{ projects[i].name }}</h3>
-              <!-- <button type="button" class="close mx-0 px-0" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button> -->
             </div>
 
             <div class="modal-body">
@@ -89,7 +116,10 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  import fileDownload from 'js-file-download';
   import projects from './projects.json'
+
   /* eslint-disable */
   export default {
     data(){
@@ -129,6 +159,21 @@
         this.i = index;
         // reset carousel -> not all projects have same # of images
         $('.carousel').carousel(0); 
+      },
+      enablePopover() {
+        // show popover enabling html parsing
+        $('[data-toggle="popover"]').popover({html:true});
+      },
+      downloadAgario() {
+        axios({
+          url: '/downloadAgario',
+          method: 'GET',
+          responseType: 'blob',
+        }).then(res => {
+          fileDownload(res.data, 'agario.zip');
+        }).catch(err => {
+          console.log(err);
+        })
       }
     },
     filters: {
@@ -136,6 +181,10 @@
         if (!value) return
         return value.join(' - ');
       }
+    },
+    mounted() {
+      // show popover enabling html parsing
+      $('[data-toggle="popover"]').popover({html:true});
     }
   }
 </script>
@@ -159,12 +208,9 @@
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   }
-  .card:hover{
-    cursor: pointer;
-    transform: scale(1.025);
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  .card-columns .card {
+    display: inline-block;
+    width:100%;
   }
 
   .carousel-icon{

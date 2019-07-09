@@ -37,9 +37,4 @@ app.all("/*", (req, res) => {
   });
 });
 
-// service logs
-// console.log(process.env.FRONT_END_HOST)
-// console.log(process.env.DOWNLOAD_HOST)
-// console.log(process.env.SEND_HOST)
-
 appServer.listen(PORT, () => {console.log(`Gateway Listening on port ${PORT}`)});

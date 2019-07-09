@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       name: 'download',
-      script: './api/downloadResume.js',
+      script: './api/download.js',
       watch: true,
     },
     {

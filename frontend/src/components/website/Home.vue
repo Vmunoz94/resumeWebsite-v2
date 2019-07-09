@@ -31,8 +31,8 @@
 <style scoped>
   #home{
     width: 100%;
-    /* min-height: 660px; */
-    height: 90vh;
+    height: 80vh;
+    min-height: 675px;
   }
 
   #backgroundImage { 

@@ -1,23 +1,35 @@
 [
   {
     "offset": "0",
-    "name": "Gatorlist",
-    "description": "Website for SFSU students to look for and find housing.",
-    "frameworks": ["Laravel", "Vue.js", "MySQL"]
+    "name": "GatorList",
+    "description": "Website for SFSU students to browse and find housing close to campus.",
+    "frameworks": ["Laravel", "Vue", "MySQL"],
+    "buttons": ["View Images", "Info"],
+    "popoverTitle": "Website Link",
+    "popoverInfo": "I do not manage the AWS EC2 instance for this website. This means the following link may or may not work. <a href='http://18.224.109.221/' target='_blank'> GatorList</a>."
   },{
     "offset": "100",
     "name": "Agar.io Clone",
-    "description": "Re-create the popular and addicting game \"Agar.io\".",
-    "frameworks": ["Node.js/Express", "React", "Redis/MongoDB"]
+    "description": "Re-create the popular and addicting game, \"Agar.io\".",
+    "frameworks": ["Node/Express", "React", "Redis/MongoDB"],
+    "buttons": ["View Images", "Info", "Download"],
+    "popoverTitle": "How To Play",
+    "popoverInfo": "Must have Docker installed. Download Docker-Compose file and follow Readme instructions"
   },{
     "offset": "200",
     "name": "API Endpoints",
-    "description": "Practice microservice architecture by making each API endpoint its own stand-alone app.",
-    "frameworks": ["Node.js/Express", "React", "MongoDB"]
+    "description": "Practice microservice architecture by making each API endpoint its own stand-alone application.",
+    "frameworks": ["Node/Express", "React", "MongoDB"],
+    "buttons": ["View Images", "Info"],
+    "popoverTitle": "Codebase",
+    "popoverInfo": "Can not show code in respect of team member's intellectual property"
   },{
     "offset": "300",
     "name": "Rock, Paper, Scissors",
     "description": "3 hour final exam. Create a rock, paper, scissors web application using websockets.",
-    "frameworks": ["Node.js/Express", "React"]
+    "frameworks": ["Node/Express", "React"],
+    "buttons": ["View Images", "Info"],
+    "popoverTitle": "Codebase",
+    "popoverInfo": "Github Repository: <a href='https://github.com/Vmunoz94/Rock-Paper-Scissors' target='_blank'> Rock, Paper, Scissors </a>"
   }
 ]

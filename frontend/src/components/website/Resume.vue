@@ -41,7 +41,7 @@
       },
       download(){
         axios({
-          url: '/download',
+          url: '/downloadResume',
           method: 'GET',
           responseType: 'blob',
         }).then(res => {
@@ -66,10 +66,7 @@ img:hover{
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-  /* transform: scale(1.01); */
   cursor: pointer;
-  /* filter: brightness(0.6);
-  -webkit-filter: brightness(0.6); */
 }
 .arrow{
   top: 140%;

@@ -42,7 +42,7 @@
     /* font-family: 'Abhaya Libre', serif !important; */
   }
   .overflow{
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .padding-top{
     padding-top: 75px;
