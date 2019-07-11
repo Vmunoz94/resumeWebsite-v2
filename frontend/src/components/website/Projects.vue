@@ -6,7 +6,7 @@
     </header>
 
     <!-- Cards -->
-    <div class="mx-5 pb-4 white-background">
+    <div class="mx-5 white-background">
       <div class="card-deck mx-2 py-4">
         <!-- eslint-disable -->
         <div class="card mb-4" v-for="(project, index) in projects"
@@ -56,6 +56,19 @@
             <small class="text-muted">{{ project.frameworks | joinArray }}</small>
           </div>
         </div>
+      </div>
+
+      <div class="pb-4 d-flex justify-content-center">
+        <button class="btn btn-lg btn-primary mx-2" 
+          v-if="this.numberOfProjects > 4" 
+          @click="showLessProjects">
+            Show Less
+        </button>
+        <button class="btn btn-lg btn-primary mx-2" 
+          v-if="this.numberOfProjects < this.allProjectsLength" 
+          @click="showMoreProjects">
+            Show More
+        </button>
       </div>
 
       <!-- Modal -->
@@ -118,14 +131,19 @@
 <script>
   import axios from 'axios';
   import fileDownload from 'js-file-download';
-  import projects from './projects.json'
+  import allProjects from './projects.json'
 
   /* eslint-disable */
   export default {
     data(){
       return {
         i: 0,
-        projects,
+        numberOfProjects: 4,
+        incrementProjectsBy: 4,
+        decrementProjectsBy: 4,
+        projects: [],
+        allProjects,
+        allProjectsLength: 0,
         images: [[
             require("../../assets/gatorlist/gatorlist1.png"),
             require("../../assets/gatorlist/gatorlist2.png"),
@@ -197,7 +215,48 @@
         }).catch(err => {
           console.log(err);
         })
-      }
+      },
+      showMoreProjects(){
+        // index out of bounds checking
+        var newNumberOfProjects = Math.min(this.numberOfProjects + this.incrementProjectsBy, this.allProjectsLength)
+
+        // append to existing array, rather than clearing the entire array and rewriting everything 
+        for(var i = this.numberOfProjects; i < newNumberOfProjects; i ++){
+          this.projects.push(this.allProjects[i])
+        }
+        // update length
+        this.numberOfProjects = newNumberOfProjects
+      },
+      showLessProjects(){
+        // ideally, the browser will always show 4 projects per row
+        // showing less projects should remove the last row, assuming 4 projects exist per row
+        switch(this.numberOfProjects % 4){
+          case 0: 
+            this.decrementProjectsBy = 4
+            break;
+          case 1: 
+            this.decrementProjectsBy = 1
+            break;
+          case 2:
+            this.decrementProjectsBy = 2
+            break
+          default:
+            this.decrementProjectsBy = 3
+        }
+
+        // pop from array
+        for (var i = this.numberOfProjects; i > this.numberOfProjects - this.decrementProjectsBy; i--){
+          this.projects.pop()
+        }
+        // update length
+        this.numberOfProjects -= this.decrementProjectsBy
+
+        // i corresponds to the image index, this always has to be less than length of projects
+        // otherwise, modal will try to display an image on a project that does not exist!
+        if (this.i >= this.numberOfProjects){
+          this.i -= this.numberOfProjects
+        }
+      },
     },
     filters: {
       joinArray(value) {
@@ -205,10 +264,19 @@
         return value.join(' - ');
       }
     },
+    created(){
+      this.allProjectsLength = this.allProjects.length
+      for(var i = 0; i < this.numberOfProjects; i++){
+        this.projects.push(this.allProjects[i])
+      }
+    },
     mounted() {
       // show popover enabling html parsing
       $('[data-toggle="popover"]').popover({html:true});
-    }
+    },
+    updated() {
+      this.enablePopover()
+    },
   }
 </script>
 
