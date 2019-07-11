@@ -6,7 +6,7 @@
     </header>
 
     <!-- Cards -->
-    <div class="mx-4 pb-4 white-background">
+    <div class="mx-5 pb-4 white-background">
       <div class="card-deck mx-2 py-4">
         <!-- eslint-disable -->
         <div class="card mb-4" v-for="(project, index) in projects"
@@ -150,6 +150,29 @@
             require("../../assets/rps/rps2.png"),
             require("../../assets/rps/rps3.png"),
             require("../../assets/rps/rps4.png"),
+          ],[
+            require("../../assets/titanic/titanic1.png"),
+            require("../../assets/titanic/titanic2.png"),
+          ],[
+            require("../../assets/spookyAuthor/spookyAuthor1.png"),
+            require("../../assets/spookyAuthor/spookyAuthor2.png"),
+            require("../../assets/spookyAuthor/spookyAuthor3.png"),
+          ],[
+            require("../../assets/searchEngines/searchEngines1.png"),
+            require("../../assets/searchEngines/searchEngines2.png"),
+            require("../../assets/searchEngines/searchEngines3.png"),
+          ],[
+            require("../../assets/shell/shell1.png"),
+          ],[
+            require("../../assets/tankWars/tankWars1.png"),
+            require("../../assets/tankWars/tankWars2.png"),
+            require("../../assets/tankWars/tankWars3.png"),
+            require("../../assets/tankWars/tankWars4.png"),
+            require("../../assets/tankWars/tankWars5.png"),
+          ],[
+            require("../../assets/galacticMail/galacticMail1.png"),
+            require("../../assets/galacticMail/galacticMail2.png"),
+            require("../../assets/galacticMail/galacticMail3.png"),
           ]]
       }
     },
