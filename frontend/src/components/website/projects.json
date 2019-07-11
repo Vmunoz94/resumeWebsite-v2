@@ -18,7 +18,7 @@
   },{
     "offset": "200",
     "name": "API Endpoints",
-    "description": "Practice microservice architecture by making each API endpoint its own stand-alone application.",
+    "description": "Practice microservice architecture by making each API endpoint its own stand-alone application. Use a gateway to correctly proxy all incoming requests.",
     "frameworks": ["Node/Express", "React", "MongoDB"],
     "buttons": ["View Images"],
     "popoverTitle": "Codebase",
@@ -26,7 +26,7 @@
   },{
     "offset": "300",
     "name": "Rock, Paper, Scissors",
-    "description": "3 hour final exam. Create a rock, paper, scissors web application using websockets.",
+    "description": "3 hour final exam that had us create a rock, paper, scissors web application utilizing websockets.",
     "frameworks": ["Node/Express", "React"],
     "buttons": ["View Images", "Info"],
     "popoverTitle": "Codebase",
@@ -34,7 +34,7 @@
   },{
     "offset": "0",
     "name": "Titanic Survival",
-    "description": "Kaggle competition using Random Forest Regression to predict whether or not an individual would have survived the Titanic disaster.",
+    "description": "Use Random Forest Regression to predict whether or not an individual would have survived the Titanic disaster.",
     "frameworks": ["Jupyter Notebooks", "Python"],
     "buttons": ["View Images", "Info"],
     "popoverTitle": "Links",
@@ -42,7 +42,7 @@
   },{
     "offset": "100",
     "name": "Spooky Author",
-    "description": "Kaggle competition using Latent Dirichlet Allocation to predict excerpts from novels by Edgar Allan Poe, H.P. Lovecraft, and Mary Shelly.",
+    "description": "Use Latent Dirichlet Allocation (LDA) to predict excerpts from novels by Edgar Allan Poe, H.P. Lovecraft, and Mary Shelly.",
     "frameworks": ["Jupyter Notebooks", "Python"],
     "buttons": ["View Images", "Info"],
     "popoverTitle": "Links",
@@ -66,7 +66,7 @@
   },{
     "offset": "0",
     "name": "Tank Wars",
-    "description": "Two player Java game where the goal is to destroy the other players tank.",
+    "description": "Two player game where the goal is to destroy the other player's tank.",
     "frameworks": ["NetBeans IDE", "Java"],
     "buttons": ["View Images"],
     "popoverTitle": "Codebase",
@@ -74,7 +74,7 @@
   },{
     "offset": "100",
     "name": "Galactic Mail",
-    "description": "Single player Java game where the goal is to get the highest score by delivering mail to each moon while avoiding asteroids.",
+    "description": "Get the highest score by delivering mail to each moon while avoiding the asteroids moving across space.",
     "frameworks": ["NetBeans IDE", "Java"],
     "buttons": ["View Images"],
     "popoverTitle": "Codebase",

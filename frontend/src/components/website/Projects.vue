@@ -59,7 +59,7 @@
       </div>
 
       <div class="pb-4 d-flex justify-content-center">
-        <button class="btn btn-lg btn-primary mx-2" 
+        <button class="btn btn-lg btn-outline-primary mx-2" 
           v-if="this.numberOfProjects > 4" 
           @click="showLessProjects">
             Show Less
@@ -125,6 +125,7 @@
     <div class="d-flex justify-content-center mt-5">
       <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#resume'"></i>
     </div>
+    <span id="projectBottomPage"/>
   </div>
 </template>
 
@@ -256,6 +257,9 @@
         if (this.i >= this.numberOfProjects){
           this.i -= this.numberOfProjects
         }
+
+        // since project section becomes smaller, scroll up a bit
+        this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 1.5})
       },
     },
     filters: {
