@@ -1,9 +1,12 @@
 <template>
   <div id="project">
-    <header class="mb-5">
+    <header class="mb-3">
       <h2 class="display-4 text-center">Projects</h2>
       <hr class="w-75 my-0"/> 
     </header>
+    <div class="alert alert-warning w-75 mx-auto" role="alert">
+      <strong>Disclaimer:</strong> To respect team member's intellectual property, group project repositories will not be made publicly available.
+    </div>
 
     <!-- Cards -->
     <div class="mx-5 white-background">
