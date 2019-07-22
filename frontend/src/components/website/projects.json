@@ -6,7 +6,7 @@
     "frameworks": ["Laravel", "Vue", "MySQL"],
     "buttons": ["View Images", "Info"],
     "popoverTitle": "Website Link",
-    "popoverInfo": "I do not manage the AWS EC2 instance for this website. This means the following link may or may not work. </br> <a href='http://18.224.109.221/' target='_blank'> GatorList</a>"
+    "popoverInfo": "I do not manage the AWS EC2 instance for this website. This means the following link may or may not work. </br> <a href='http://18.224.109.221/' target='_blank'> GatorList</a> <br/>Codebase: <a href='https://github.com/Vmunoz94/gatorlist' target='_blank'> GatorList </a>"
   },{
     "offset": "100",
     "name": "Agar.io Clone",
