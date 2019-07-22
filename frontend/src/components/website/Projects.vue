@@ -5,7 +5,7 @@
       <hr class="w-75 my-0"/> 
     </header>
     <div class="alert alert-warning w-75 mx-auto" role="alert">
-      <strong>Disclaimer:</strong> To respect team member's intellectual property, group project repositories will not be made publicly available.
+      <strong>Disclaimer:</strong> To respect some team member's intellectual property, some group project repositories will not be made publicly available.
     </div>
 
     <!-- Cards -->
@@ -116,13 +116,13 @@
                 </a>
               </div>
             </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger btn-large btn-block w-50 mx-auto" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-      <!-- <div class="text-center">
-        <i class="fas fa-arrow-left left-right-arrows mx-5"></i>
-        <i class="fas fa-arrow-right left-right-arrows mx-5"></i>
-      </div> -->
     </div>
 
     <div class="d-flex justify-content-center mt-5">
@@ -232,6 +232,23 @@
         this.numberOfProjects = newNumberOfProjects
       },
       showLessProjects(){
+        // since project section becomes smaller, scroll up a bit
+        // screen size detection
+        if( window.innerWidth <= 575) {
+          if (this.numberOfProjects === 10)
+            this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 2})
+          else
+            this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 3.5})
+        }else if (window.innerWidth <= 991)
+          if (this.numberOfProjects === 10)
+            this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 1.5})
+          else
+            this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 2})
+        else{
+          this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 1.5})
+        }
+
+        
         // ideally, the browser will always show 4 projects per row
         // showing less projects should remove the last row, assuming 4 projects exist per row
         switch(this.numberOfProjects % 4){
@@ -260,9 +277,6 @@
         if (this.i >= this.numberOfProjects){
           this.i -= this.numberOfProjects
         }
-
-        // since project section becomes smaller, scroll up a bit
-        this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 1.5})
       },
     },
     filters: {
