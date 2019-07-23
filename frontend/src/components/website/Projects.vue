@@ -36,8 +36,10 @@
               <i class="fas fa-images"></i> {{ button }}
             </button>
             <!-- info -->
-            <button class="btn btn-light btn-block mt-0 mb-2"
+            <a class="btn btn-light btn-block mt-0 mb-2"
               v-if="button === 'Info'"
+              tabindex="0"
+              role="button"
               data-container="body" 
               data-toggle="popover" 
               data-placement="bottom"
@@ -45,7 +47,7 @@
               :title="project.popoverTitle" 
               :data-content="project.popoverInfo">
               <i class="fas fa-info-circle"></i> {{ button }}
-            </button>
+            </a>
             <!-- download -->
             <button class="btn btn-info btn-block mt-0 mb-2"
               v-if="button === 'Download'"
@@ -248,7 +250,7 @@
           this.$scrollTo('#projectBottomPage', 0, {offset:-window.innerHeight * 1.5})
         }
 
-        
+
         // ideally, the browser will always show 4 projects per row
         // showing less projects should remove the last row, assuming 4 projects exist per row
         switch(this.numberOfProjects % 4){
@@ -335,6 +337,10 @@
     font-size: 50px;  
   }
   .left-right-arrows:hover{
+    cursor: pointer;
+  }
+
+  div a {
     cursor: pointer;
   }
 
