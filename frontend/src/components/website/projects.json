@@ -8,7 +8,7 @@
     "popoverTitle": "Website Link",
     "popoverInfo": "I do not manage the AWS EC2 instance for this website. This means the following link may or may not work. </br> <a href='http://18.224.109.221/' target='_blank'> GatorList</a> <br/>Codebase: <a href='https://github.com/Vmunoz94/gatorlist' target='_blank'> GatorList </a>"
   },{
-    "offset": "100",
+    "offset": "150",
     "name": "Agar.io Clone",
     "description": "Re-create the popular and addicting game, \"Agar.io\".",
     "frameworks": ["Node/Express", "React", "Redis/MongoDB"],
@@ -16,7 +16,7 @@
     "popoverTitle": "How To Play",
     "popoverInfo": "Must have Docker installed. Download Docker-Compose file and follow Readme instructions"
   },{
-    "offset": "200",
+    "offset": "300",
     "name": "API Endpoints",
     "description": "Practice microservice architecture by making each API endpoint its own stand-alone application. Use a gateway to correctly proxy all incoming requests.",
     "frameworks": ["Node/Express", "React", "MongoDB"],
@@ -24,7 +24,7 @@
     "popoverTitle": "Codebase",
     "popoverInfo": "Can not show code in respect of team member's intellectual property"
   },{
-    "offset": "300",
+    "offset": "450",
     "name": "Rock, Paper, Scissors",
     "description": "3 hour final exam that had us create a rock, paper, scissors web application utilizing websockets.",
     "frameworks": ["Node/Express", "React"],
@@ -40,7 +40,7 @@
     "popoverTitle": "Links",
     "popoverInfo": "Kaggle Competition: <a href='https://www.kaggle.com/c/titanic/overview' target='_blank'> Titanic: Machine Learning from Disaster</a> </br> Codebase: <a href='https://nbviewer.jupyter.org/github/Vmunoz94/Kaggle-Titanic/blob/master/titanic.ipynb' target='_blank'> Titanic.ipynb</a>"
   },{
-    "offset": "100",
+    "offset": "150",
     "name": "Spooky Author",
     "description": "Use Latent Dirichlet Allocation (LDA) to predict excerpts from novels by Edgar Allan Poe, H.P. Lovecraft, and Mary Shelly.",
     "frameworks": ["Jupyter Notebooks", "Python"],
@@ -48,7 +48,7 @@
     "popoverTitle": "Links",
     "popoverInfo": "Kaggle Competition: <a href='https://www.kaggle.com/c/spooky-author-identification' target='_blank'> Spooky Author Identification</a> </br> Codebase: <a href='https://nbviewer.jupyter.org/github/Vmunoz94/Kaggle-SpookyAuthor/blob/master/LDA_Spooky_Author-Update.ipynb' target='_blank'> Spooky_Author.ipynb</a>"
   },{
-    "offset": "200",
+    "offset": "300",
     "name": "Search Engines",
     "description": "Create an inverted index based on the documents provided to allow for fast searching.",
     "frameworks": ["Python"],
@@ -56,7 +56,7 @@
     "popoverTitle": "Codebase",
     "popoverInfo": "Github Repository: <a href='https://github.com/Vmunoz94/Search-Engines/tree/master/booleanQueryEvaluation' target='_blank'> Boolean Indexing</a> </br> Github Repository: <a href='https://github.com/Vmunoz94/Search-Engines/tree/master/positionalInvertedIndex' target='_blank'> Positional Indexing </a>"
   },{
-    "offset": "300",
+    "offset": "450",
     "name": "Shell",
     "description": "Create a simple terminal that can run low level shell commands.",
     "frameworks": ["C"],
@@ -72,7 +72,7 @@
     "popoverTitle": "Codebase",
     "popoverInfo": "Can not show code in respect of team member's intellectual property"
   },{
-    "offset": "100",
+    "offset": "150",
     "name": "Galactic Mail",
     "description": "Get the highest score by delivering mail to each moon while avoiding the asteroids moving across space.",
     "frameworks": ["NetBeans IDE", "Java"],

@@ -14,7 +14,7 @@
         <!-- eslint-disable -->
         <div class="card mb-4" v-for="(project, index) in projects"
           :key="project.name"
-          data-aos= "flip-left"
+          data-aos= "fade-up"
           :data-aos-delay= project.offset
         >
           <!-- card header -->
