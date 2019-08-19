@@ -55,8 +55,6 @@
 </script>
 
 <style scoped>
-#resume{
-}
 img{
   max-width: 750px;
   transition: all 0.2s ease;
