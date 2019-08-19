@@ -64,11 +64,14 @@
       <hr class="bg-white w-50"/>
     </div>
 
-    <div class="text-right mx-2 pb-2">
+    <footer class="mx-2 pb-2 d-flex justify-content-end">
+      <span class="pr-2">
+      View Website Code ->
+      </span>
       <a href="https://github.com/Vmunoz94/resumeWebsite-v2" target="_blank">
         <i class="fas fa-code icons"></i>
       </a>
-    </div>
+    </footer>
   </div>
 </template>
 
