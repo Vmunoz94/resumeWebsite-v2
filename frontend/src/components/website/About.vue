@@ -11,20 +11,22 @@
           <h2 class="display-4 text-center">About</h2>
           <p class="lead text-center">- How I began</p>
           <hr class="w-75 text-center bg-white"/>
-          <p> 
-            Contrary to many of my classmates, I began programming by accident. 
-            At <span class="highSchool">St. Mary's College High School</span> I did exceptionally well in Math and Physics, 
-            so my advisors advised me to pursue a Mechanical, Civil, or Electrical Engineering degree. I chose Mechanical Engineering, 
-            since at that time I had no clue about programming.
-          </p>
-          <p>
-            At the end of my second year in college at <span class="college">San Francisco State University</span>, I took a mandatory course called "Introduction to Computers". 
-            That class was the very first time I worked with a programming language and was the most enjoyable class I have taken so far.
-          </p>
-          <p>
-            I spent the following year debating whether I should finish my Mechanical Engineering degree or start over and pursue Computer Science.
-            Even though I was already half way done with my Mechanical Engineering degree, I chose to pursue Computer Science.
-          </p>
+          <article>
+            <p> 
+              Contrary to many of my classmates, I began programming by accident. 
+              At <span class="highSchool">St. Mary's College High School</span> I did exceptionally well in Math and Physics, 
+              so my advisors advised me to pursue a Mechanical, Civil, or Electrical Engineering degree. I chose Mechanical Engineering, 
+              since at that time I had no clue about programming.
+            </p>
+            <p>
+              At the end of my second year in college at <span class="college">San Francisco State University</span>, I took a mandatory course called "Introduction to Computers". 
+              That class was the very first time I worked with a programming language and was the most enjoyable class I have taken so far.
+            </p>
+            <p>
+              I spent the following year debating whether I should finish my Mechanical Engineering degree or start over and pursue Computer Science.
+              Even though I was already half way done with my Mechanical Engineering degree, I chose to pursue Computer Science.
+            </p>
+          </article>
         </div>
 
         <!-- image -->
