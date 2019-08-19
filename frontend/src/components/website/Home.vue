@@ -4,7 +4,7 @@
 
     <transition appear enter-active-class="animated fadeIn">
       <div class="row text-white mx-0">
-        <div class="col-md-8 col-lg-7 col-xl-6 ">
+        <header class="col-md-8 col-lg-7 col-xl-6 ">
           <div class="container left text-center pb-1">
             <div class="display-4 m-0">Hello World</div>
             <hr class="bg-white mt-0 w-75"/>
@@ -14,7 +14,7 @@
               with a B.S degree in Computer Science. Please click the arrow below to read more.
             </p>
           </div>
-        </div>
+        </header>
         <div class="col">
           <div class="container right">          
           </div>
