@@ -18,7 +18,7 @@
           :data-aos-delay= project.offset
         >
           <!-- card header -->
-          <img class="card-img-top" :src="images[index][0]" alt="Card image cap">
+          <img class="card-img-top" v-lazy="images[index][0]" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">{{ project.name }}</h5>
             <hr class="py-0 mt-0"/>

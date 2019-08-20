@@ -1,6 +1,8 @@
 <template>
   <div id="home">
-    <div id="backgroundImage"/>
+    <div id="backgroundImage">
+      <img v-lazy="require('../../assets/forrest.png')">
+    </div>
 
     <transition appear enter-active-class="animated fadeIn">
       <div class="row text-white mx-0">
@@ -38,41 +40,39 @@
   #backgroundImage { 
     z-index: -1;
     width: 100%;
-    /* height: 1000px; */
     min-height: 100%;
     height: 150%;
-    background: url(../../assets/forrest.png) no-repeat center center fixed; 
-    background-size: 100% 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* for browser */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -250px
   }
 
   .left{
     margin-top: 75px;
     width: 90%;
+    max-width: 700px;
     border-radius: 100px 0;
     background-color: rgba(0, 0, 0, 0.85) !important;
   }
 
+  /* header title */
   .display-4{
     letter-spacing: 5px;
   }
 
+  /* Victor Munoz */
   #name{
     font-weight: bold;
     font-size: 1.1em;
     letter-spacing: 2px;
     color: gold;
   }
+  /* SFSU */
   #school{
     font-weight: bold;
     font-size: 1.1em;
@@ -80,6 +80,7 @@
     color: rgb(240, 0, 240);
   }
 
+  /* animate bouncing arrow */
   .arrow{
     position: absolute;
     top: 50%;
@@ -91,15 +92,15 @@
   }
 
   @media (max-width: 768px) and (orientation:portrait) {
-    #backgroundImage{
-      /* for mobile */
-      -webkit-background-size: auto 100%; 
-      -moz-background-size: auto 100%; 
-      -o-background-size: auto 100%; 
-      background-size: auto 100%;
-      background-attachment: scroll;
+    img{
+      /* 
+        originally image is moved up -250px for desktop users 
+        for mobile don't move image up 250px but rather only 50px
+      */
+      margin-top: -50px;
     }
     .display-4{
+      /* make header title smaller */
       font-size: 40px;
     }
   }

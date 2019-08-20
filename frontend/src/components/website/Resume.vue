@@ -8,7 +8,7 @@
       </header>
 
       <!-- image -->
-      <img src="../../assets/Resume.png" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4" 
+      <img v-lazy="require('../../assets/Resume.png')" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4" 
       data-aos="zoom-in" 
       data-aos-easing="ease" 
       data-aos-duration="600"

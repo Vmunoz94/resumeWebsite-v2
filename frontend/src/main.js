@@ -6,6 +6,8 @@ import 'aos/dist/aos.css';
 // vue router
 import VueRouter from 'vue-router';
 import { routes } from './routes/routes.js';
+// vue lazy load images
+import VueLazyload from 'vue-lazyload'
 
 var VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo, {
@@ -18,6 +20,8 @@ const router = new VueRouter({
   mode: 'history',
   routes,
 });
+
+Vue.use(VueLazyload)
 
 Vue.config.productionTip = false
 
