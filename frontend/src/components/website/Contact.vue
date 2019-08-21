@@ -55,7 +55,7 @@
       <a href="https://hub.docker.com/u/vmunoz94" target="_blank" class="mx-1">
         <i class="fab fa-docker icons"></i>
       </a>
-      <a href="https://www.linkedin.com/in/victor-munoz-b2227a59/" target="_blank" class="mx-1">
+      <a href="https://www.linkedin.com/in/vmunoz94/" target="_blank" class="mx-1">
         <i class="fab fa-linkedin icons"></i>
       </a>
       <a href="mailto:victormunozresume@gmail.com" class="mx-1">
