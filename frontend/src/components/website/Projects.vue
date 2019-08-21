@@ -77,7 +77,9 @@
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <!-- if i == -1 do not load modal; hence do not load unnecessary images -->
+      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"
+        v-if="i != -1">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
 
@@ -87,7 +89,9 @@
 
             <div class="modal-body">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- bottom indicators -->
                 <ol class="carousel-indicators w-25 mx-auto bg-dark rounded">
+                  <!-- index 0 is set to active, all other index's should not have class="active" -->
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"/>
                   <li 
                     v-for="(image, index) in images[i]" 
@@ -96,7 +100,10 @@
                     :data-slide-to="index"
                   />
                 </ol>
+                
+                <!-- image -->
                 <div class="carousel-inner">
+                  <!-- index 0 is set to active, all other index's should not have class="active" -->
                   <div class="carousel-item active">
                     <img class="d-block w-100" :src="images[i][0]" alt="First slide">
                   </div>
@@ -108,6 +115,8 @@
                     <img class="d-block w-100" :src="image" alt="First slide">
                   </div>
                 </div>
+
+                <!-- left and right indicator -->
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
@@ -119,6 +128,7 @@
               </div>
             </div>
 
+            <!-- close button -->
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger btn-large btn-block w-50 mx-auto" data-dismiss="modal">Close</button>
             </div>
@@ -143,13 +153,13 @@
   export default {
     data(){
       return {
-        i: 0,
-        numberOfProjects: 4,
+        i: -1, // determine which images to load from the image array, -1 means no images
+        numberOfProjects: 4, // show 4 projects by default
         incrementProjectsBy: 4,
         decrementProjectsBy: 4,
-        projects: [],
-        allProjects,
-        allProjectsLength: 0,
+        projects: [], // created() hook will populate projects based on number of projects 
+        allProjects, // store JSON object
+        allProjectsLength: 0, // JSON object length
         images: [[
             require("../../assets/gatorlist/gatorlist1.png"),
             require("../../assets/gatorlist/gatorlist2.png"),
