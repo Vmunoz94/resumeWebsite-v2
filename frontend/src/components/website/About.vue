@@ -1,25 +1,26 @@
 <template>
   <div id="about">
-    <div class="container">
-      <div class="row">
+
+
+    
+    <ul class="flex-container">
         <!-- text -->
-        <div class="col-xs-12 col-md-6" 
+        <li class="flex-item" 
           data-aos="fade-right" 
           data-aos-easing="ease" 
-          data-aos-duration="600"
-          data-aos-offset="0">
-          <h2 class="display-4 text-center">About</h2>
-          <p class="lead text-center">- How I began</p>
-          <hr class="w-75 text-center bg-white"/>
+          data-aos-duration="800">
+          <h2 class="display-4">About</h2>
+          <p class="lead">- How I began</p>
+          <hr class="w-75 bg-white"/>
           <article>
             <p> 
               Contrary to many of my classmates, I began programming by accident. 
-              At <span class="highSchool">St. Mary's College High School</span> I did exceptionally well in Math and Physics, 
+              At <span id="highschool" class="highlight">St. Mary's College High School</span> I did exceptionally well in Math and Physics, 
               so my advisors advised me to pursue a Mechanical, Civil, or Electrical Engineering degree. I chose Mechanical Engineering, 
               since at that time I had no clue about programming.
             </p>
             <p>
-              At the end of my second year in college at <span class="college">San Francisco State University</span>, I took a mandatory course called "Introduction to Computers". 
+              At the end of my second year in college at <span id="college" class="highlight">San Francisco State University</span>, I took a mandatory course called "Introduction to Computers". 
               That class was the very first time I worked with a programming language and was the most enjoyable class I have taken so far.
             </p>
             <p>
@@ -27,52 +28,57 @@
               Even though I was already half way done with my Mechanical Engineering degree, I chose to pursue Computer Science.
             </p>
           </article>
-        </div>
+        </li>
 
         <!-- image -->
-        <div class="col-12 col-md-6 order-first order-md-last" 
+        <li class="flex-item" 
           data-aos="fade-left" 
           data-aos-easing="ease" 
-          data-aos-duration="600"
-          data-aos-offset="0">
+          data-aos-duration="800">
           <img v-lazy="require('../../assets/rain.png')" alt="rain" class="img-thumbnail rounded-circle mx-auto d-block my-4">
-        </div>
-      </div>
-    </div>
-    <div class="d-flex justify-content-center mt-5">
-      <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#project'"></i>
-    </div>
+        </li>
+    </ul>
+
+    <!-- arrow -->
+    <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#project'"></i>
   </div>
 </template>
 
 <style scoped>
-  .highSchool{
-    font-weight: bold;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    color: red;
-  }
-  .college{
-    font-weight: bold;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    color: rgb(240, 0, 240);
-  }
-  
   #about{
     background-color: rgb(29, 31, 32);
     color: white;
   }
 
-  img{
-    max-height: 500px;
+  .flex-container{
+    margin: 0 45px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  .flex-item{
+    max-width: 500px;
+  }
+  .flex-item article{
+    text-align: justify;
+  }
+
+  article p{
+    margin: 25px 0;
+  }
+  #highschool{
+    color: red;
+  }
+  #college{
+    color: rgb(240, 0, 240);
   }
 
   .arrow{
-    top: 140%;
-    color: white;
-    font-size: 75px;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
   }
 </style>

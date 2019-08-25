@@ -39,13 +39,23 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    /* font-family: 'Abhaya Libre', serif !important; */
   }
   .overflow{
     overflow: hidden;
   }
   .padding-top{
     padding-top: 75px;
+  }
+  .highlight{
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  .arrow{
+    color: white;
+    font-size: 75px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }
   .arrow:hover{
     cursor: pointer;

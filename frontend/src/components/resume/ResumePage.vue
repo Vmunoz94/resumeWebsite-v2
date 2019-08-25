@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid shrink">
+  <div class="container-fluid">
     <div class="row">
             <!-- Left Half -->
             <div class="col-sm-4 bg-dark p-0 text-white">
@@ -85,60 +85,45 @@
                     <h5 class="text-dark pl-5 py-2 m-0">Projects</h5>
                 </section>
                 <hr class="style-two m-0">
-                <div class="pl-5 py-3 mr-5">
+                <div class="pl-5 py-3 mr-4">
                     <p class="m-0 pl-0"><strong>GatorList:</strong></p>
-                    <p class="m-0 pl-3"><em>Full stack web development project utilizing the Laravel and Vue.js framework for CSC 648</em></p>
-                    <p class="mb-1 pl-3"><em>(Software Engineering)</em></p>
-                    <div class="border-left border-dark mb-2 ml-3 pr-5">
-                        <p class="m-0 pl-3">
+                    <p class="m-0 pl-3"><em>Full stack web development project utilizing Laravel and Vue.js framework for</em></p>
+                    <p class="mb-1 pl-3"><em>CSC 648 (Software Engineering)</em></p>
+                    <div class="border-left border-dark mb-2 ml-3 pr-4">
+                        <p class="m-0 text-align">
                             The goal of the project was to create a fully functional website where SFSU students can go and look for housing. 
                             This project consisted of seven people, in which I took on the role as the frontend lead and used Slack and Trello 
                             to distribute tasks accordingly to my team members. As the frontend lead, I set up a skeletal template to make the job easier for my teammates.
                             This included setting up Vue, Vue-Router, VueX and effectively/efficiently communicating with the backend lead to create proper API endpoints.
                         </p>
-                        <!-- <p class="m-0 pl-3">The goal of the project was to create a fully functional website where SFSU students can go and look for housing.</p>
-                        <p class="m-0 pl-3">This project consisted of seven people, in which I took on the role as the frontend lead and used Slack and Trello 
-                            to distribute tasks accordingly to my team members.</p>
-                        <p class="m-0 pl-3">As the frontend lead, I set up a skeletal template to make the job easier for my teammates.</p> 
-                        <p class="m-0 pl-3">This included setting up Vue, Vue-Router, VueX and effectively/efficiently communicating with the backend lead to create proper API endpoints.</p> -->
-                        <p class="m-0 pl-3">Used Google Maps:</p>
+                        <p class="m-0">Utilized Google Maps APIs such as:</p>
                         <p class="col m-0 pl-5">&bull; Distance Matrix API to calculate distance and commute time from a specified address to SFSU campus.</p>
-                        <p class="col m-0 pl-5">&bull; Geocoding API to extract the latitude and longitude of a specified address to place a marker on google maps.</p>
-                        <p class="col m-0 pl-5">&bull; Javascript API to draw an interactive map.</p>
+                        <p class="col m-0 pl-5">&bull; Geocoding API to extract the latitude and longitude of a specific address to place a marker on google maps.</p>
+                        <p class="col m-0 pl-5">&bull; Javascript API to draw the interactive Google map.</p>
                     </div>
 
                     <p class="m-0 pl-0"><strong>Agar.io-Clone:</strong></p>
-                    <p class="m-0 pl-3"><em>This four person full stack web development project was created using Express and React framework for CSC 667</em></p>
-                    <p class="mb-1 pl-3"><em>(Internet Applications)</em></p>
-                    <div class="border-left border-dark mb-2 ml-3 pr-5">
-                        <p class="m-0 pl-3">
+                    <p class="mb-1 pl-3"><em>Four person full stack web development project created using Express and React framework for CSC 667 (Internet Applications)</em></p>
+                    <div class="border-left border-dark mb-2 ml-3 pr-4">
+                        <p class="m-0 text-align">
                             The goal of the project was to re-create the immensely popular and addicting game "Agar.io".
                             Used vanilla canvas to draw elements on the screen and websockets/redis to properly broadcast player positions to everyone.
                             All game logic was done server side and used microservice architecture to prevent our entire application from crashing in case one backend service is down.
                             Dockerized our application to run in docker swarm mode, this guarantees our application will work on everyone's machines.
                         </p>
-                        <!-- <p class="m-0 pl-3">The goal of the project was to re-create the immensely popular and addicting game "Agar.io".</p>
-                        <p class="m-0 pl-3">Used vanilla canvas to draw elements on the screen and websockets/redis to properly broadcast player positions to everyone.</p>
-                        <p class="m-0 pl-3">All game logic was done server side and used microservice architecture to prevent our entire application from crashing in case one backend service is down.</p>
-                        <p class="m-0 pl-3">Dockerized our application to run in docker swarm mode, this guarantees our application will work on everyone's machines.</p> -->
                     </div>
 
                     <p class="m-0 pl-0"><strong>Topic Modeling:</strong></p>
-                    <p class="m-0 pl-3"><em>Kaggle three person Python project developed in Jupyter Notebooks for CSC 849</em></p>
-                    <p class="mb-1 pl-3"><em>(Search Engines)</em></p>
-                    <div class="border-left border-dark mb-2 ml-3 pr-5">
-                        <p class="m-0 pl-3">
+                    <p class="m-0 pl-3"><em>Three person Kaggle Python project developed in Jupyter Notebooks for</em></p>
+                    <p class="mb-1 pl-3"><em>CSC 849 (Search Engines)</em></p>
+                    <div class="border-left border-dark mb-2 ml-3 pr-4">
+                        <p class="m-0 text-align">
                             The goal of the project was to tackle the Spooky Author Identification challenge on Kaggle.
                             The challenge was to successfully predict the authors from excerpts of novels from Mary Shelley, Edgar Allan Poe, and H.P. Lovecraft.
                             We split the project into three parts with each team member approaching the challenge with a different procedure.
                             My approach was to create a Latent Dirichlet Allocation model using Python's Gensim library.
                             This model generated a specified number of topics, which I then used to correlate to specific authors.
                         </p>
-                        <!-- <p class="m-0 pl-3">The goal of the project was to tackle the Spooky Author Identification challenge on Kaggle.</p>
-                        <p class="m-0 pl-3">The challenge was to successfully predict the authors from excerpts of novels from Mary Shelley, Edgar Allan Poe, and H.P. Lovecraft.</p>
-                        <p class="m-0 pl-3">We split the project into three parts with each team member approaching the challenge with a different procedure.</p>
-                        <p class="m-0 pl-3">My approach was to create a Latent Dirichlet Allocation model using Python's Gensim library.</p>
-                        <p class="m-0 pl-3">This model generated a specified number of topics, which I then used to correlate to specific authors.</p> -->
                     </div>
                 </div>
 
@@ -170,7 +155,7 @@
                     <h5 class="text-dark pl-5 py-2 m-0">Employment</h5>
                 </section>
                 <hr class="style-two m-0">
-                <div class="pl-5 py-3">
+                <div class="pl-5 py-3 right-half-padding-bottom">
                     <p class="m-0 pl-0"><strong>Olympic Club:</strong></p>
                     <p class="m-0 pl-3"><em>Outside Services (May 2013 - Present)</em></p>
 
@@ -184,10 +169,7 @@
 </template>
 
 <style scoped>
-.shrink {
-  /* transform: scale(.9); */
-  transform-origin: top left;
-}
+
 .col-4 {
     max-height: 1283px;
     height: 1283px !important;
@@ -224,13 +206,20 @@ p{
 
 /*Right Half*/
 .right-half-padding{
-    padding-top: 50px;
+    padding-top: 100px;
+}
+.right-half-padding-bottom{
+    margin-bottom: 51px;
 }
 
 hr.style-two {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.text-align{
+    text-align: justify;
 }
 
 li {

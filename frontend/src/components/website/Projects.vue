@@ -9,7 +9,7 @@
     </div>
 
     <!-- Cards -->
-    <div class="mx-5 white-background">
+    <div class="white-background">
       <div class="card-deck mx-2 py-4">
         <!-- eslint-disable -->
         <div class="card mb-4" v-for="(project, index) in projects"
@@ -137,9 +137,7 @@
       </div>
     </div>
 
-    <div class="d-flex justify-content-center mt-5">
-      <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#resume'"></i>
-    </div>
+    <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#resume'"></i>
     <span id="projectBottomPage"/>
   </div>
 </template>
@@ -320,6 +318,7 @@
   }
 
   .white-background{
+    margin: 0 25px;
     background-color: white;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
@@ -336,18 +335,13 @@
     display: inline-block;
     width:100%;
   }
+  .card-text{
+    text-align: justify;
+  }
 
   .carousel-icon{
     background-color: black;
     border-radius: 25%;
-  }
-
-  .left-right-arrows{
-    color: black;
-    font-size: 50px;  
-  }
-  .left-right-arrows:hover{
-    cursor: pointer;
   }
 
   div a {
@@ -355,11 +349,10 @@
   }
 
   .arrow{
-    top: 140%;
     color: black;
-    font-size: 75px;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
   
   // Bootstrap 4 breakpoints & gutter

@@ -19,8 +19,7 @@
     <form class="container pb-5" @submit.prevent="onSend" 
       data-aos="zoom-out-up" 
       data-aos-easing="ease" 
-      data-aos-duration="600"
-      data-aos-offset="100">
+      data-aos-duration="800">
       <!-- missing info alert -->
       <transition appear enter-active-class="animated shake">
         <div v-if="missingInfo" class="alert alert-warning py-0" role="alert">
@@ -34,7 +33,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" v-model='email'>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email" v-model='email'>
       </div>
       <br/>
       <div class="form-group">
@@ -144,13 +143,14 @@
 
 <style scoped>
   #contact{
-    /* background-color: rgb(63, 63, 63); */
-    /* background-color: rgb(97, 99, 104); */
     background-color: rgb(48, 50, 54);
     color: white;
   }
   form{
-    max-width: 500px;
+    max-width: 600px;
+    /* margin: 0 35px; */
+    padding-left: 35px;
+    padding-right: 35px;
   }
   .icons{
     font-size: 25px;

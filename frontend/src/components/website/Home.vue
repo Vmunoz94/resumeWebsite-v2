@@ -1,29 +1,26 @@
 <template>
   <div id="home">
-    <div id="backgroundImage">
-      <img v-lazy="require('../../assets/forrest.png')">
-    </div>
+    <!-- background image -->
+    <img v-lazy="require('../../assets/forrest.png')">
 
+    <!-- hello world box -->
     <transition appear enter-active-class="animated fadeIn">
-      <div class="row text-white mx-0">
-        <header class="col-md-8 col-lg-7 col-xl-6 ">
-          <div class="container left text-center pb-1">
-            <div class="display-4 m-0">Hello World</div>
+      <div class="row mx-auto">
+        <header class="col-md-8 col-lg-6">
+          <div class="left-box">
+            <div class="display-4">Hello World</div>
             <hr class="bg-white mt-0 w-75"/>
-            <p class="container text-left">
-              Thank you for visiting my website. My name is <span id="name">Victor Muñoz</span>, 
-              a recent college graduate from <span id="school">San Francisco State University</span> 
+            <p>
+              Thank you for visiting my website. My name is <span id="name" class="highlight">Victor Muñoz</span>, 
+              a recent college graduate from <span id="college" class="highlight">San Francisco State University</span> 
               with a B.S degree in Computer Science. Please click the arrow below to read more.
             </p>
           </div>
         </header>
-        <div class="col">
-          <div class="container right">          
-          </div>
-        </div>
       </div>
     </transition>
-  
+
+    <!-- arrow pointing down -->
     <div class="d-flex justify-content-center">
       <i class="fas fa-chevron-down arrow bounce" v-scroll-to="'#about'"></i>
     </div>
@@ -32,63 +29,52 @@
 
 <style scoped>
   #home{
-    width: 100%;
-    height: 80vh;
-    min-height: 675px;
+    height: 92vh;
+    color: white;
   }
 
-  #backgroundImage { 
-    z-index: -1;
-    width: 100%;
-    min-height: 100%;
-    height: 150%;
+  img{
     position: absolute;
     top: 0;
-  }
-  img{
+    z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 150%;
     object-fit: cover;
-    margin-top: -250px
+    margin-top: -25vh;
   }
 
-  .left{
-    margin-top: 75px;
+  .left-box{
+    margin: 10% auto;
+    padding: 5px 0;
     width: 90%;
-    max-width: 700px;
+    max-width: 600px;
     border-radius: 100px 0;
     background-color: rgba(0, 0, 0, 0.85) !important;
   }
-
+  .left-box p {
+    padding: 0 45px;
+    text-align: justify;
+  }
   /* header title */
   .display-4{
     letter-spacing: 5px;
+    text-align: center;
   }
-
+  
   /* Victor Munoz */
   #name{
-    font-weight: bold;
-    font-size: 1.1em;
-    letter-spacing: 2px;
     color: gold;
   }
   /* SFSU */
-  #school{
-    font-weight: bold;
-    font-size: 1.1em;
-    letter-spacing: 2px;
+  #college{
     color: rgb(240, 0, 240);
   }
 
-  /* animate bouncing arrow */
+  /* arrow */
   .arrow{
     position: absolute;
-    top: 50%;
-    margin-top: 290px;
-    color: white;
-    font-size: 75px;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    top: 0;
+    margin-top: 90vh;
   }
 
   @media (max-width: 768px) and (orientation:portrait) {

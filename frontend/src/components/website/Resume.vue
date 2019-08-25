@@ -1,31 +1,26 @@
 
 <template>
   <div id="resume" class="mb-2">
-    <div class="container-fluid m-0">
-      <header class="mb-4">
-        <div class="display-4 text-center">Resume</div>
-        <hr class="w-75"/>
-      </header>
+    <header class="mb-4">
+      <div class="display-4 text-center">Resume</div>
+      <hr class="w-75"/>
+    </header>
 
-      <!-- image -->
-      <img v-lazy="require('../../assets/Resume.png')" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4" 
-      data-aos="zoom-in" 
-      data-aos-easing="ease" 
-      data-aos-duration="600"
-      data-aos-offset="0"
-      @click="openNewTab">
+    <!-- image -->
+    <img v-lazy="require('../../assets/Resume.png')" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4" 
+    data-aos="zoom-in" 
+    data-aos-easing="ease" 
+    data-aos-duration="800"
+    @click="openNewTab">
 
-      <!-- buttons -->
-      <div>
-        <span class="text-right float-right d-flex align-items-end justify-content-end mt-4">
-          <button class="btn btn-lg btn-dark" @click="download"> <i class="fas fa-file-download"></i> Download PDF</button>
-        </span>
-        
-        <span class="d-flex justify-content-end middle">
-          <i class="fas fa-chevron-down arrow bounce text-dark" v-scroll-to="'#contact'"></i>
-        </span>
-      </div>
-    </div>
+    <!-- buttons -->
+    <span class="d-flex justify-content-end">
+      <button class="btn btn-lg btn-dark" @click="download"> <i class="fas fa-file-download"></i> Download PDF</button>
+    </span>
+    
+    <span class="d-flex justify-content-center">
+      <i class="fas fa-chevron-down arrow bounce text-dark" v-scroll-to="'#contact'"></i>
+    </span>
   </div>
 </template>
 
@@ -66,16 +61,7 @@ img:hover{
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
   cursor: pointer;
 }
-.arrow{
-  top: 140%;
-  color: black;
-  font-size: 75px;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-}
-.middle{
-  width: 53%;
-}
+
 @media (max-width: 768px) {
   .btn {
     font-size:14px;
