@@ -35,7 +35,7 @@
           data-aos="fade-left" 
           data-aos-easing="ease" 
           data-aos-duration="800">
-          <img v-lazy="require('../../assets/rain.png')" alt="rain" class="img-thumbnail rounded-circle mx-auto d-block my-4">
+          <img src="../../assets/rain.png" alt="rain" class="img-thumbnail rounded-circle mx-auto d-block my-4">
         </li>
     </ul>
 

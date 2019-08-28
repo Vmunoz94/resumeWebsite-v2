@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <!-- background image -->
-    <img v-lazy="require('../../assets/forrest.png')">
+    <img src="../../assets/forrest.png">
 
     <!-- hello world box -->
     <transition appear enter-active-class="animated fadeIn">
