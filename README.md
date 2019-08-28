@@ -30,6 +30,8 @@ To start off, I broke everything up into microservices. This is helpful because 
 > AWS Route 53 is used to point my domain name to an AWS load balancer, which points to my EC2 instance. <br/>
 > The AWS load balancer is listening on __PORTS 80 and 443__ and is needed to connect an Amazon SSL certificate.
 
+- ## Model:
+![Website Model](/websitemodel.png)
 
 <br/>
 <br/>
