@@ -1,6 +1,8 @@
 # Hello, Welcome to My Website!
 I've tried to keep everything as organized as possible so all backend and frontend code are in their appropriate folders. The frameworks being used are Node and Express for the backend and Vue for the frontend. Lastly, I dockerized each microservice into its own container and opened up one Amazon EC2 instance which is running my applications in Docker swarm mode. 
 
+<br/>
+
 ## Guide:
 To start off, I broke everything up into microservices. This is helpful because it forces modularity, meaning that each service is focused on doing one task alone. If that task happens to fail, then it would be easier to pinpoint the problem when everything is modular rather than monolithic. An added bonus to modularity is that the other services will not crash because of it. 
 
@@ -29,6 +31,8 @@ To start off, I broke everything up into microservices. This is helpful because 
 > AWS Certificate Manager was used to get an SSL Certificate for my domain name. <br/>
 > AWS Route 53 is used to point my domain name to an AWS load balancer, which points to my EC2 instance. <br/>
 > The AWS load balancer is listening on __PORTS 80 and 443__ and is needed to connect an Amazon SSL certificate.
+
+<br/>
 
 ## Model:
 ![Website Model](/websitemodel.png)
