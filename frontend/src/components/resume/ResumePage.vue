@@ -26,12 +26,22 @@
                     <h6 class="mb-0">
                         <i class="far fa-envelope"></i> G-mail:
                     </h6>
-                    <p>VictorMunozResume@gmail.com</p>
+                    <p><a href='mailto:victormunozresume@gmail.com'>VictorMunozResume@gmail.com</a></p>
 
                     <h6 class="mb-0">
-                        <i class="far fa-window-maximize"></i> Website:
+                        <i class="far fa-window-maximize"></i> Portfolio:
                     </h6>
-                    <p>www.VictorMunoz.io</p>
+                    <p><a href='https://VictorMunoz.io' ta='_blank'>https://VictorMunoz.io</a></p>
+
+                    <h6 class="mb-0">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn:
+                    </h6>
+                    <p><a href='https://linkedin.com/in/vmunoz94/' ta='_blank'>https://linkedin.com/in/vmunoz94/</a></p>
+
+                    <h6 class="mb-0">
+                        <i class="fab fa-github"></i> GitHub:
+                    </h6>
+                    <p><a href='https://github.com/Vmunoz94' ta='_blank'>https://github.com/Vmunoz94</a></p>
                 </div>
 
                 <section id="proficient" class="bg-white text-dark pl-5 py-2 rounded-right">
@@ -86,44 +96,37 @@
                 </section>
                 <hr class="style-two m-0">
                 <div class="pl-5 py-3 mr-4">
-                    <p class="m-0 pl-0"><strong>GatorList:</strong></p>
+                    <p class="m-0 pl-0"><strong>GatorList</strong> - (Apartment Finder)<strong>:</strong></p>
                     <p class="m-0 pl-3"><em>Full stack web development project utilizing Laravel and Vue.js framework for</em></p>
                     <p class="mb-1 pl-3"><em>CSC 648 (Software Engineering)</em></p>
                     <div class="border-left border-dark mb-2 ml-3 pr-4">
-                        <p class="m-0 text-align">
-                            The goal of the project was to create a fully functional website where SFSU students can go and look for housing. 
-                            This project consisted of seven people, in which I took on the role as the frontend lead and used Slack and Trello 
-                            to distribute tasks accordingly to my team members. As the frontend lead, I set up a skeletal template to make the job easier for my teammates.
-                            This included setting up Vue, Vue-Router, VueX and effectively/efficiently communicating with the backend lead to create proper API endpoints.
-                        </p>
-                        <p class="m-0">Utilized Google Maps APIs such as:</p>
-                        <p class="col m-0 pl-5">&bull; Distance Matrix API to calculate distance and commute time from a specified address to SFSU campus.</p>
-                        <p class="col m-0 pl-5">&bull; Geocoding API to extract the latitude and longitude of a specific address to place a marker on google maps.</p>
-                        <p class="col m-0 pl-5">&bull; Javascript API to draw the interactive Google map.</p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Create a fully functional website where SFSU students can easily look for housing.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">As the frontend lead, I coordinated and communicated with my teammates to ensure product delivery.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Designed and developed all website pages/routes.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Proposed new ideas and features to make our application stand out from competitors.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Set up Vue, Vue-Router, VueX and communicated with backend lead to establish all proper API endpoints.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Integrated 3rd party API’s such as Google Maps and reCaptcha.</span></p>
                     </div>
 
-                    <p class="m-0 pl-0"><strong>Agar.io-Clone:</strong></p>
-                    <p class="mb-1 pl-3"><em>Four person full stack web development project created using Express and React framework for CSC 667 (Internet Applications)</em></p>
+                    <p class="m-0 pl-0"><strong>Agar.io-Clone</strong> - (Multiplayer Game)<strong>:</strong></p>
+                    <p class="mb-1 pl-3"><em>Full stack web development project created using Node/Express and React framework for CSC 667 (Internet Applications)</em></p>
                     <div class="border-left border-dark mb-2 ml-3 pr-4">
-                        <p class="m-0 text-align">
-                            The goal of the project was to re-create the immensely popular and addicting game "Agar.io".
-                            Used vanilla canvas to draw elements on the screen and websockets/redis to properly broadcast player positions to everyone.
-                            All game logic was done server side and used microservice architecture to prevent our entire application from crashing in case one backend service is down.
-                            Dockerized our application to run in docker swarm mode, this guarantees our application will work on everyone's machines.
-                        </p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Re-create “Agaro.io” using websockets, Redis, MondoDB, React, and Docker.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Co-developed the skeletal template and game logic that will be used by our teammates to build upon, placed a huge emphasis on following Microservice Architecture.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Designed the home page making sure to keep it simple, easy, and attractive for users.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Integrated teammate’s user login/register task into the home page.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Implemented websockets in order to share player locations with every client.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Dockerized application for easy horizontal scaling.</span></p>
                     </div>
 
-                    <p class="m-0 pl-0"><strong>Topic Modeling:</strong></p>
-                    <p class="m-0 pl-3"><em>Three person Kaggle Python project developed in Jupyter Notebooks for</em></p>
+                    <p class="m-0 pl-0"><strong>Topic Modeling</strong> - (Artificial Intelligence)<strong>:</strong></p>
+                    <p class="m-0 pl-3"><em>Kaggle Python project developed in Jupyter Notebooks for</em></p>
                     <p class="mb-1 pl-3"><em>CSC 849 (Search Engines)</em></p>
                     <div class="border-left border-dark mb-2 ml-3 pr-4">
-                        <p class="m-0 text-align">
-                            The goal of the project was to tackle the Spooky Author Identification challenge on Kaggle.
-                            The challenge was to successfully predict the authors from excerpts of novels from Mary Shelley, Edgar Allan Poe, and H.P. Lovecraft.
-                            We split the project into three parts with each team member approaching the challenge with a different procedure.
-                            My approach was to create a Latent Dirichlet Allocation model using Python's Gensim library.
-                            This model generated a specified number of topics, which I then used to correlate to specific authors.
-                        </p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Tackle the Spooky Author Identification challenge on Kaggle, which was to successfully predict authors from excerpts of novels from Mary Shelley, Edgar Allan Poe, and H.P. Lovecraft.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Preprocessed the 20,000 datasets before training the model. This included tokenization, lemmatization, and stopword removal.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Calculated coherence score in order to determine the correct number of topics LDA should produce.</span></p>
+                        <p class="col m-0 pl-3 clearfix">&bull; <span class="float">Mapped each topic to specific author.</span></p>
                     </div>
                 </div>
 
@@ -134,7 +137,7 @@
                 <hr class="style-two m-0">
                 <div class="pl-5 py-3">
                     <p class="m-0 pl-0"><strong>San Francisco State University:</strong></p>
-                    <p class="m-0 pl-3"><em>Bachelor of Science in Computer Science</em></p>
+                    <p class="m-0 pl-3"><em>Bachelor of Science in Computer Science</em> - (Recent Graduate)</p>
                     <p class="m-0 pl-3"><em>Senior Electives Included:</em></p>
                     <div class="row">
                         <p class="col m-0 pl-5">&bull; Computer Networks</p>
@@ -169,7 +172,6 @@
 </template>
 
 <style scoped>
-
 .col-4 {
     max-height: 1283px;
     height: 1283px !important;
@@ -204,12 +206,20 @@ p{
     padding-left: 20px;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 /*Right Half*/
 .right-half-padding{
     padding-top: 100px;
 }
 .right-half-padding-bottom{
-    margin-bottom: 51px;
+    margin-bottom: 10px;
 }
 
 hr.style-two {
@@ -232,6 +242,14 @@ li:before{
     vertical-align:middle;
     line-height:20px;
 }
+.float{
+    float: right;
+    width: 97%;
+}
+.clearfix{
+    overflow: auto;
+}
+
 /* style sheet for "letter" printing */
 @media print{
     @page {
