@@ -219,7 +219,7 @@ a:hover{
     padding-top: 100px;
 }
 .right-half-padding-bottom{
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 hr.style-two {
