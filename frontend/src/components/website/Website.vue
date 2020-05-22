@@ -5,7 +5,7 @@
     <About class="padding-top overflow"/>
     <Projects class="padding-top"/>
     <Resume class="padding-top"/>
-    <Contact class="padding-top overflow"/>
+    <Contact class="overflow"/>
   </div>
 </template>
 
@@ -60,6 +60,7 @@
   .arrow:hover{
     cursor: pointer;
     animation-duration: 1.5s;
+    
   }
   .bounce {
     animation-name: bounce;

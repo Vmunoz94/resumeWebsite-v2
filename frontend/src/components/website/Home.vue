@@ -1,7 +1,8 @@
 <template>
   <div id="home">
     <!-- background image -->
-    <img src="../../assets/forrest.png">
+    <img src="../../assets/forrest.jpg">
+
 
     <!-- hello world box -->
     <transition appear enter-active-class="animated fadeIn">
@@ -34,11 +35,11 @@
   }
 
   img{
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: -1;
-    width: 100%;
-    height: 150%;
+    width: 100vw;
+    height: 150vh;
     object-fit: cover;
     margin-top: -25vh;
   }
@@ -50,6 +51,10 @@
     max-width: 600px;
     border-radius: 100px 0;
     background-color: rgba(0, 0, 0, 0.85) !important;
+
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
   .left-box p {
     padding: 0 45px;
@@ -87,20 +92,6 @@
     }
     .display-4{
       /* make header title smaller */
-      font-size: 40px;
-    }
-  }
-
-  @media (max-width: 768px) and (orientation:landscape) {
-    #backgroundImage{
-      /* for mobile */
-      /* -webkit-background-size: 100% auto; 
-      -moz-background-size: 100% auto; 
-      -o-background-size: 100% auto; 
-      background-size: 100% auto; */
-      background-attachment: scroll;
-    }
-    .display-4{
       font-size: 40px;
     }
   }

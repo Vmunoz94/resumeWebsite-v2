@@ -1,8 +1,9 @@
 <template>
   <div id="project">
+    <div class="blur"></div>
     <header class="mb-3">
       <h2 class="display-4 text-center">Projects</h2>
-      <hr class="w-75 my-0"/> 
+      <hr class="w-75 my-0 bg-white"/> 
     </header>
     <div class="alert alert-warning w-75 mx-auto" role="alert">
       <strong>Disclaimer:</strong> To respect some team member's intellectual property, some group project repositories will not be made publicly available.
@@ -16,6 +17,7 @@
           :key="project.name"
           data-aos= "fade-up"
           :data-aos-delay= project.offset
+          data-aos-once="true"
         >
           <!-- card header -->
           <img class="card-img-top" v-lazy="images[index][0]" alt="Card image cap">
@@ -75,10 +77,10 @@
             Show More
         </button>
       </div>
-
+    
       <!-- Modal -->
       <!-- if i == -1 do not load modal; hence do not load unnecessary images -->
-      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"
+      <div class="modal fade mt-5" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"
         v-if="i != -1">
         <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content">
@@ -159,52 +161,52 @@
         allProjects, // store JSON object
         allProjectsLength: 0, // JSON object length
         images: [[
-            require("../../assets/gatorlist/gatorlist1.png"),
-            require("../../assets/gatorlist/gatorlist2.png"),
-            require("../../assets/gatorlist/gatorlist3.png"),
-            require("../../assets/gatorlist/gatorlist4.png"),
-            require("../../assets/gatorlist/gatorlist5.png"),
-            require("../../assets/gatorlist/gatorlist6.png"),
+            require("../../assets/gatorlist/gatorlist1.jpg"),
+            require("../../assets/gatorlist/gatorlist2.jpg"),
+            require("../../assets/gatorlist/gatorlist3.jpg"),
+            require("../../assets/gatorlist/gatorlist4.jpg"),
+            require("../../assets/gatorlist/gatorlist5.jpg"),
+            require("../../assets/gatorlist/gatorlist6.jpg"),
           ],[
-            require("../../assets/agario/agario1.png"),
-            require("../../assets/agario/agario2.png"),
-            require("../../assets/agario/agario3.png"),
-            require("../../assets/agario/agario4.png"),
-            require("../../assets/agario/agario5.png"),
+            require("../../assets/agario/agario1.jpg"),
+            require("../../assets/agario/agario2.jpg"),
+            require("../../assets/agario/agario3.jpg"),
+            require("../../assets/agario/agario4.jpg"),
+            require("../../assets/agario/agario5.jpg"),
           ],[
-            require("../../assets/api/api1.png"),
-            require("../../assets/api/api2.png"),
-            require("../../assets/api/api3.png"),
-            require("../../assets/api/api4.png"),
-            require("../../assets/api/api5.png"),
+            require("../../assets/api/api1.jpg"),
+            require("../../assets/api/api2.jpg"),
+            require("../../assets/api/api3.jpg"),
+            require("../../assets/api/api4.jpg"),
+            require("../../assets/api/api5.jpg"),
           ],[
-            require("../../assets/rps/rps1.png"),
-            require("../../assets/rps/rps2.png"),
-            require("../../assets/rps/rps3.png"),
-            require("../../assets/rps/rps4.png"),
+            require("../../assets/rps/rps1.jpg"),
+            require("../../assets/rps/rps2.jpg"),
+            require("../../assets/rps/rps3.jpg"),
+            require("../../assets/rps/rps4.jpg"),
           ],[
-            require("../../assets/titanic/titanic1.png"),
-            require("../../assets/titanic/titanic2.png"),
+            require("../../assets/titanic/titanic1.jpg"),
+            require("../../assets/titanic/titanic2.jpg"),
           ],[
-            require("../../assets/spookyAuthor/spookyAuthor1.png"),
-            require("../../assets/spookyAuthor/spookyAuthor2.png"),
-            require("../../assets/spookyAuthor/spookyAuthor3.png"),
+            require("../../assets/spookyAuthor/spookyAuthor1.jpg"),
+            require("../../assets/spookyAuthor/spookyAuthor2.jpg"),
+            require("../../assets/spookyAuthor/spookyAuthor3.jpg"),
           ],[
-            require("../../assets/searchEngines/searchEngines1.png"),
-            require("../../assets/searchEngines/searchEngines2.png"),
-            require("../../assets/searchEngines/searchEngines3.png"),
+            require("../../assets/searchEngines/searchEngines1.jpg"),
+            require("../../assets/searchEngines/searchEngines2.jpg"),
+            require("../../assets/searchEngines/searchEngines3.jpg"),
           ],[
-            require("../../assets/shell/shell1.png"),
+            require("../../assets/shell/shell1.jpg"),
           ],[
-            require("../../assets/tankWars/tankWars1.png"),
-            require("../../assets/tankWars/tankWars2.png"),
-            require("../../assets/tankWars/tankWars3.png"),
-            require("../../assets/tankWars/tankWars4.png"),
-            require("../../assets/tankWars/tankWars5.png"),
+            require("../../assets/tankWars/tankWars1.jpg"),
+            require("../../assets/tankWars/tankWars2.jpg"),
+            require("../../assets/tankWars/tankWars3.jpg"),
+            require("../../assets/tankWars/tankWars4.jpg"),
+            require("../../assets/tankWars/tankWars5.jpg"),
           ],[
-            require("../../assets/galacticMail/galacticMail1.png"),
-            require("../../assets/galacticMail/galacticMail2.png"),
-            require("../../assets/galacticMail/galacticMail3.png"),
+            require("../../assets/galacticMail/galacticMail1.jpg"),
+            require("../../assets/galacticMail/galacticMail2.jpg"),
+            require("../../assets/galacticMail/galacticMail3.jpg"),
           ]]
       }
     },
@@ -313,35 +315,38 @@
 
 <style scoped lang="scss">
   #project{
-    background-color: rgb(182, 171, 75);
-    color: black;
+    color: white;
+    position: relative;
+  }
+
+  .blur{
+    backdrop-filter: blur(2.5px);
+    position: absolute;
+    z-index: -1;
+    margin-top: -75px;
+    min-width: 100vw;
+    min-height: 100%;
   }
 
   .white-background{
+    z-index: 2;
     margin: 0 25px;
-    background-color: white;
+    color: black;
+    background-color: rgba(255, 255, 255, .9);
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow:    0px 0px 25px 5px rgba(0,0,0,0.75);
+    box-shadow:         0px 0px 25px 5px rgba(0,0,0,0.75);
   }
 
   .card{
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.5);
+    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.5);
   }
   .card-columns .card {
     display: inline-block;
     width:100%;
-  }
-  .card-text{
-    text-align: justify;
-  }
-
-  .carousel-icon{
-    background-color: black;
-    border-radius: 25%;
   }
 
   div a {
@@ -349,7 +354,7 @@
   }
 
   .arrow{
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     margin-top: 50px;

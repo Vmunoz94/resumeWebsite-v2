@@ -1,14 +1,12 @@
 <template>
   <div id="about">
-
-
-    
     <ul class="flex-container">
         <!-- text -->
         <li class="flex-item" 
           data-aos="fade-right" 
           data-aos-easing="ease" 
-          data-aos-duration="800">
+          data-aos-duration="800"
+          data-aos-once="true">
           <h2 class="display-4">About</h2>
           <p class="lead">- How I began</p>
           <hr class="w-75 bg-white"/>
@@ -34,8 +32,9 @@
         <li class="flex-item" 
           data-aos="fade-left" 
           data-aos-easing="ease" 
-          data-aos-duration="800">
-          <img src="../../assets/rain.png" alt="rain" class="img-thumbnail rounded-circle mx-auto d-block my-4">
+          data-aos-duration="800"
+          data-aos-once="true">
+          <img v-lazy="require('../../assets/rain-lossy.jpg')" alt="rain" class="img-thumbnail rounded-circle mx-auto d-block my-4">
         </li>
     </ul>
 
@@ -46,8 +45,11 @@
 
 <style scoped>
   #about{
-    background-color: rgb(29, 31, 32);
+    background: rgb(29, 31, 32);
     color: white;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .75);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 10px 10px rgba(0, 0, 0, .75);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 10px 10px rgba(0, 0, 0, .75);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
 
   .flex-container{

@@ -1,17 +1,13 @@
 
 <template>
-  <div id="resume" class="mb-2">
+  <div id="resume">
     <header class="mb-4">
       <div class="display-4 text-center">Resume</div>
       <hr class="w-75"/>
     </header>
 
     <!-- image -->
-    <img v-lazy="require('../../assets/Resume.png')" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4" 
-    data-aos="zoom-in" 
-    data-aos-easing="ease" 
-    data-aos-duration="800"
-    @click="openNewTab">
+    <img v-lazy="require('../../assets/Resume.jpg')" alt="resume" class="img-thumbnail mx-auto d-block rounded w-75 mb-4">
 
     <!-- buttons -->
     <span class="d-flex justify-content-end">
@@ -31,9 +27,9 @@
 
   export default {
     methods: {
-      openNewTab(){
-        window.open('resume', '_blank');
-      },
+      // openNewTab(){
+      //   window.open('resume', '_blank');
+      // },
       download(){
         axios({
           url: '/downloadResume',
@@ -50,16 +46,21 @@
 </script>
 
 <style scoped>
+#resume{
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(2.5px);
+}
 img{
-  max-width: 750px;
+  max-width: 800px;
   transition: all 0.2s ease;
   opacity: 1;
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, .75);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
-img:hover{
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-  cursor: pointer;
+button{
+  margin: 0 25px;
 }
 
 @media (max-width: 768px) {

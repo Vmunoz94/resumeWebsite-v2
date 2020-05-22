@@ -1,5 +1,8 @@
 <template>
   <div id="contact">
+
+    <div class='container padding-top round-top mt-4'>
+
     <div>
       <h2 class="display-4 text-center mb-0">Contact</h2>
       <hr class="bg-white w-50"/>
@@ -16,10 +19,8 @@
       </div>
     </div>
 
-    <form class="container pb-5" @submit.prevent="onSend" 
-      data-aos="zoom-out-up" 
-      data-aos-easing="ease" 
-      data-aos-duration="800">
+    <form class="container no-border pb-5" 
+      @submit.prevent="onSend">
       <!-- missing info alert -->
       <transition appear enter-active-class="animated shake">
         <div v-if="missingInfo" class="alert alert-warning py-0" role="alert">
@@ -63,7 +64,9 @@
       <hr class="bg-white w-50"/>
     </div>
 
-    <footer class="mx-2 pb-2 d-flex justify-content-end">
+    </div>
+
+    <footer class="pb-2 d-flex justify-content-end">
       <span class="pr-2">
       View Website Code ->
       </span>
@@ -143,12 +146,30 @@
 
 <style scoped>
   #contact{
-    background-color: rgb(48, 50, 54);
+    /* background: rgb(48, 50, 54); */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2.5px);
     color: white;
+    padding-bottom: 50px;
+  }
+  .container{
+    position: relative;
+    background: rgb(48, 50, 54);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+  .no-border{
+    -webkit-box-shadow: none;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    none;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         none;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+  .round-top{
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
   }
   form{
     max-width: 600px;
-    /* margin: 0 35px; */
     padding-left: 35px;
     padding-right: 35px;
   }
@@ -166,5 +187,17 @@
   }
   .alert{
     white-space: pre-line;
+  }
+  footer{
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    z-index: -1;
+    background:rgb(48, 50, 54);
+    padding: 0 25px;
+    padding-top: 250px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
 </style>
