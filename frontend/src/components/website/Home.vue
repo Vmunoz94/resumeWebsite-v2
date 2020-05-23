@@ -36,12 +36,12 @@
 
   img{
     position: fixed;
-    top: 0;
+    bottom: 0;
     z-index: -1;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     object-fit: cover;
-    margin-top: -25vh;
+    /* margin-top: -25vh; */
   }
 
   .left-box{

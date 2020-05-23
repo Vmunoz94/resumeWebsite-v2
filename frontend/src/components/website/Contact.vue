@@ -151,9 +151,10 @@
     backdrop-filter: blur(2.5px);
     color: white;
     padding-bottom: 50px;
+    position: relative;
   }
   .container{
-    position: relative;
+    /* position: relative; */
     background: rgb(48, 50, 54);
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Firefox 3.5 - 3.6 */

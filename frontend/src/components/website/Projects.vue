@@ -207,6 +207,10 @@
             require("../../assets/galacticMail/galacticMail1.jpg"),
             require("../../assets/galacticMail/galacticMail2.jpg"),
             require("../../assets/galacticMail/galacticMail3.jpg"),
+          ],[
+            require("../../assets/ep/ep1.jpg"),
+            require("../../assets/ep/ep2.jpg"),
+            require("../../assets/ep/ep3.jpg"),
           ]]
       }
     },

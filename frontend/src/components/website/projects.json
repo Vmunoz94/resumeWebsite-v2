@@ -79,5 +79,14 @@
     "buttons": ["View Images"],
     "popoverTitle": "Codebase",
     "popoverInfo": "Can not show code in respect of team member's intellectual property"
+  },
+  {
+    "offset": "300",
+    "name": "Shipping Calculator",
+    "description": "Simple shipping rate calculator and label generator using UPS's and EasyPost's APIs.",
+    "frameworks": ["Node/Express", "Vue"],
+    "buttons": ["View Images", "Info"],
+    "popoverTitle": "Codebase",
+    "popoverInfo": "Coming soon..."
   }
 ]
