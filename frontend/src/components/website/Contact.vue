@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
 
-    <div class='container padding-top round-top mt-4'>
+    <div class='container form-bg padding-top round-top mt-4'>
 
     <div>
       <h2 class="display-4 text-center mb-0">Contact</h2>
@@ -153,18 +153,16 @@
     padding-bottom: 50px;
     position: relative;
   }
-  .container{
-    /* position: relative; */
+
+  .form-bg{
     background: rgb(48, 50, 54);
+    width: 90%; 
+    max-width: 800px;
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Firefox 3.5 - 3.6 */
     box-shadow:         0px 0px 10px 5px rgba(0, 0, 0, .5);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
-  .no-border{
-    -webkit-box-shadow: none;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    none;  /* Firefox 3.5 - 3.6 */
-    box-shadow:         none;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-  }
+
   .round-top{
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;

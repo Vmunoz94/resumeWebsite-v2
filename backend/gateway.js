@@ -1,4 +1,6 @@
 const express = require("express");
+const serveStatic = require('serve-static');
+const path = require('path');
 const server = require("http");
 const httpProxy = require("http-proxy");
 const history = require('connect-history-api-fallback');
@@ -30,11 +32,12 @@ app.all("/send*", (req, res) => {
   });
 });
 
-// frontend proxy
-app.all("/*", (req, res) => {
-  apiProxy.web(req, res, { 
-    target: process.env.FRONT_END_HOST || "http://localhost:8080/"
-  });
-});
+app.use('/', serveStatic(path.join(__dirname, '../frontend/dist')))
+// // frontend proxy
+// app.all("/*", (req, res) => {
+//   apiProxy.web(req, res, { 
+//     target: process.env.FRONT_END_HOST || "http://localhost:8080/"
+//   });
+// });
 
 appServer.listen(PORT, () => {console.log(`Gateway Listening on port ${PORT}`)});

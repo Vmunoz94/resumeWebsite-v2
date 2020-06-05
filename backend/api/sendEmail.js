@@ -1,14 +1,17 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const dotenv = require('dotenv');
 
 const app = express();
 const PORT = 6000;
 app.use(bodyParser.json());
+dotenv.config();
 
 app.post("/send", (req, res) => {
   
   let messageTemplate = `New Message from\n\tName: ${req.body.name} \n\tEmail: ${req.body.email}\n\tMessage: ${req.body.message}`;
+  console.log(messageTemplate);
 
   const auth = {
     user: process.env.USER_HOST,

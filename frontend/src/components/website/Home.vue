@@ -45,7 +45,7 @@
   }
 
   .left-box{
-    margin: 10% auto;
+    margin: 50px auto;
     padding: 5px 0;
     width: 90%;
     max-width: 600px;
@@ -62,7 +62,7 @@
   }
   /* header title */
   .display-4{
-    letter-spacing: 5px;
+    letter-spacing: 2.5px;
     text-align: center;
   }
   

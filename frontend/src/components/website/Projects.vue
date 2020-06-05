@@ -348,10 +348,6 @@
     -moz-box-shadow:    0px 0px 10px 0px rgba(0,0,0,0.5);
     box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.5);
   }
-  .card-columns .card {
-    display: inline-block;
-    width:100%;
-  }
 
   div a {
     cursor: pointer;
