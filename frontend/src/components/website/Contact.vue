@@ -30,11 +30,11 @@
 
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="name" class="form-control" id="name" placeholder="Enter Name" v-model='name'>
+        <input type="name" class="form-control" id="name" placeholder="Enter Your Name" v-model='name'>
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Email" v-model='email'>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" v-model='email'>
       </div>
       <br/>
       <div class="form-group">
